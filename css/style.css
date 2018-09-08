@@ -1,352 +1,377 @@
-*,*::after,*::before{
-    box-sizing: content-box;
+@media(min-width: 769px) {
+    *,*::after,*::before{
+        box-sizing: content-box;
+    }
+    
+    html{
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+    }
+    
+    section {
+        text-align: center;
+        width: 90%;
+        padding: 4em 0;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+    
+    .header {
+        position: fixed;
+        background-color: #f1f1f1;
+        width: 100%;
+        height: 80px;
+        z-index: 10;
+        top: 0;
+    }
+    
+    .imagem {
+        background-image: url(../img/logo_rrz.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100px;
+        height: 100%;
+        margin-left: 5%; 
+    }
+    
+    .menu {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25%;
+        padding: 0 0;
+        top: 0;
+        width: fit-content;
+        height: 80px;
+        font-size: 1em;
+        z-index: 11;
+        transition: top .25s ease-in-out;
+    }
+    
+    .menu-anchor {
+        display: none;
+    }
+    
+    .menu li {
+        display: flex;
+        box-sizing: border-box;
+        padding: 1em;
+        height: 50px;
+        border-radius: 5px;
+        transition: .25s;
+    }
+    
+    .menu li:hover {
+        background-color: #fff; 
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: #535154;
+        font-weight: 700;
+    }
+    
+    .feather-color {
+        stroke: #727073;
+    }
+    
+    .campo-busca {
+        position: fixed;
+        width: 25%;
+        top: 22px;
+        right: 90px;
+        padding: 11px;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        transition: all .25s ease-in-out;
+        z-index: 13;
+    }
+    
+    .close-anchor {
+        display: none;
+    }
+    
+    .busca-anchor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 75px;
+        border-radius: 5px;
+        top: 0;
+        width: 80px;
+        height: 80px;
+        z-index: 15;
+    }
+    
+    
+    .carrocel {
+        margin-top: 80px;
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background-size: 200%;
+        background-position: center;
+        color: #ffffff;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .carrocel::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #2753b3;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        opacity: .4;
+        z-index: 1;
+    }
+    
+    .conteudo-carrocel {
+        display: flex;
+        align-items: center;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding: 4em 0;
+        height: 68%;
+    }
+    
+    .conteudo-carrocel-inner {
+        position: relative;
+        z-index: 4;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .titulo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #3A3A3C;
+    }
+    
+    .subtitulo{
+        margin: 1em;
+        font-size: 1em;
+    }
+    
+    .titulo-main {
+        font-size: 2em;
+        font-weight: 700;
+    }
+    
+    .carrocel p {
+        font-size: .875em;
+        margin-top: 2em;
+    }
+    
+    .botao-saber-mais {
+        background-color: #F5A623;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: .8em;
+        font-weight: 700;
+        margin: 40px auto 0;
+        width: fit-content;
+        padding: 1em 2em;
+        border-radius: 5px;
+    }
+    
+    .sobre-nos ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .sobre-nos li{
+        margin: 2em 1em;
+        width: 300px;
+        font-size: .87em;
+    }
+    
+    .nossos-planos {
+        background-color: #FAFAFA;
+        width: 100%;
+    }
+    
+    .planos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .planos div {
+        width: 20%;
+        line-height: 1.5;
+        margin: 0 1em;
+    }
+    
+    .planos h1 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 2em .5em;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .planos ul {
+        padding: 1em 1em;
+        background-color: #ffffff;
+        font-size: .9em;
+        border-radius: 0 0 10px 10px;
+        color: #727073;
+    }
+    
+    .planos li {
+        margin: .5em 0;
+    }
+    
+    .fit-title {
+        background-color: #52A5E1;
+    }
+    
+    .fit-title::before {
+        content: "";
+        display: block;
+        background-image: url(../img/navigation.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto 5px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .premium-title {
+        background-color: #F3E752;
+    }
+    
+    .premium-title::before {
+        content: "";
+        display: block;
+        background-image: url(../img/briefcase.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto 5px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .start-title {
+        background-color: #EF4358;
+    }
+    
+    .start-title::before {
+        content: "";
+        display: block;
+        background-image: url(../img/shield.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto 5px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .parceiros{
+        overflow-y: auto;
+    }
+    
+    .parceiros ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .parceiros li {
+        margin: 5px;
+    }
+    
+    .contato {
+        width: 100%;
+        background-image: url(../img/fundo_formulario.png);
+        background-position: center;
+        background-size: 600%;
+        background-repeat: no-repeat;
+        color: #ffffff;
+    }
+    
+    .contato .titulo {
+        color: #ffffff;
+    }
+    
+    .formulario legend {
+        font-size: .8em;
+        padding: 1em;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+    .formulario input, textarea {
+        padding: 20px 15px;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        margin: 5px 1%;
+    }
+    
+    .inputs {
+        display: flex;
+        flex-wrap:  wrap;
+        justify-content: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    input {
+        box-sizing: border-box;
+        width: 48%;
+    }
+    
+    textarea {
+        width: 96%;
+    }
+    
+    .botao-enviar {
+        background-color: #F5A623;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: .8em;
+        font-weight: 700;
+        margin-top: 5px;
+        width: 100px;
+        padding: 1em 2em;
+        border-radius: 5px;
+        border: 0;
+    }
+    
+    .rodape {
+        font-size: .7em;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .rodape p {
+        margin-top: 5px;
+    }
+    .img-rodape {
+        background-image: url(../img/logo_rrz.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50px;
+        height: 20px;
+        margin: 0 auto;
+    }
 }
-
-html{
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-}
-
-section {
-    text-align: center;
-    width: 90%;
-    padding: 4em 0;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-.header {
-    position: fixed;
-    background-color: #f1f1f1;
-    width: 100%;
-    height: 80px;
-    z-index: 20;
-    top: 0;
-}
-
-.imagem {
-    background-image: url(../img/logo_rrz.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100px;
-    height: 100%;
-    margin-left: 5%; 
-}
-
-.menu {
-    position: fixed;
-    right: 1%;
-    top: 
-    display: flex;
-    flex-direction: row;
-    border-radius: 0 0 10px 10px;
-    padding: 20px 0;
-    text-align: center;
-    width: 98%;
-    font-size: 1em;
-    z-index: 10;
-    transition: top .25s ease-in-out;
-}
-
-.menu-active {
-    top: 60px;
-}
-
-.menu li {
-    padding: 1em;
-    margin-top: .5em;
-}
-
-.menu li:hover {
-    background-color: #fff;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #535154;
-}
-
-.feather-color {
-    stroke: #3A3A3C;
-}
-
-.parse-white {
-    stroke: #f1f1f1;
-}
-
-.menu-anchor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 1%;
-    border-radius: 5px 5px 0 0;
-    top: 0;
-    width: 60px;
-    height: 60px;
-    transition: all .25s ease-in-out;
-}
-
-.menu-anchor-active {
-    background-color: #727073;
-}
-
-.busca-anchor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 20%;
-    border-radius: 5px;
-    top: 0;
-    width: 60px;
-    height: 60px;
-}
-
-.campo-busca {
-    position: fixed;
-    width: 69%;
-    top: -100px;
-    right: 21.5%;
-    padding: 11px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    transition: all .25s ease-in-out;
-}
-
-.busca-anchor-active {
-    top: 12px;
-}
-
-.close-anchor {
-    position: fixed;
-    top: -100px;
-    right: 22%;
-    padding: 11px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    transition: all .25s ease-in-out;
-}
-
-.close-anchor-active {
-    top: 8px;
-}
-
-.carrocel {
-    margin-top: 60px;
-    position: relative;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
-    padding: 0;
-}
-
-.carrocel::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #2753b3;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: .4;
-    z-index: 1;
-}
-
-.conteudo-carrocel {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 4em 0;
-}
-
-.conteudo-carrocel-inner {
-    position: relative;
-    z-index: 4;
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.titulo {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #3A3A3C;
-}
-
-.subtitulo{
-    margin: 1em;
-    font-size: 1em;
-}
-
-.titulo-main {
-    font-size: 1.6em;
-    font-weight: 700;
-}
-
-.carrocel p {
-    font-size: .875em;
-    margin-top: 2em;
-}
-
-.botao-saber-mais {
-    background-color: #F5A623;
-    text-transform: uppercase;
-    font-size: .8em;
-    font-weight: 700;
-    margin: 20px auto 0;
-    width: fit-content;
-    padding: 1em 2em;
-    border-radius: 5px;
-}
-
-.sobre-nos li{
-    margin-top: 2em;
-}
-
-.nossos-planos {
-    background-color: #FAFAFA;
-    width: 100%;
-}
-
-.planos div {
-    margin: 2em auto;
-    width: 90%;
-    line-height: 1.5;
-}
-
-.planos h1 {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 2em .5em;
-    border-radius: 10px 10px 0 0;
-}
-
-.planos ul {
-    padding: 2em 1em;
-    background-color: #ffffff;
-    font-size: .9em;
-    border-radius: 0 0 10px 10px;
-    color: #727073;
-}
-
-.fit-title {
-    background-color: #52A5E1;
-}
-
-.fit-title::before {
-    content: "";
-    display: block;
-    background-image: url(../img/navigation.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin: 0 auto 5px;
-    width: 30px;
-    height: 30px;
-}
-
-.premium-title {
-    background-color: #F3E752;
-}
-
-.premium-title::before {
-    content: "";
-    display: block;
-    background-image: url(../img/briefcase.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin: 0 auto 5px;
-    width: 30px;
-    height: 30px;
-}
-
-.start-title {
-    background-color: #EF4358;
-}
-
-.start-title::before {
-    content: "";
-    display: block;
-    background-image: url(../img/shield.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin: 0 auto 5px;
-    width: 30px;
-    height: 30px;
-}
-
-.parceiros{
-    overflow-y: auto;
-}
-
-.parceiros ul {
-    display: flex;
-    flex-direction: row;
-}
-
-.parceiros li {
-    margin: 5px;
-}
-
-.contato {
-    width: 100%;
-    background-image: url(../img/fundo_formulario.png);
-    background-position: center;
-    background-size: 600%;
-    background-repeat: no-repeat;
-    color: #ffffff;
-}
-
-.contato .titulo {
-    color: #ffffff;
-}
-
-.formulario legend {
-    font-size: .8em;
-    padding: 1em;
-    max-width: 450px;
-    margin: 0 auto;
-}
-
-.formulario input, textarea {
-    width: 80%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    margin: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-}
-
-.rodape {
-    font-size: .7em;
-    padding: 20px;
-    text-align: center;
-}
-
-.rodape p {
-    margin-top: 5px;
-}
-.img-rodape {
-    background-image: url(../img/logo_rrz.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 50px;
-    height: 20px;
-    margin: 0 auto;
-}
-
-@media(max-width: 480px) {
+@media(max-width: 768px) {
         
     html{
         font-family: 'Montserrat', sans-serif;
@@ -393,6 +418,7 @@ section {
         padding: 20px 0;
         text-align: center;
         width: 98%;
+        height: 224px;
         font-size: 1em;
         z-index: 10;
         top: -400px;
@@ -415,6 +441,7 @@ section {
     .menu a {
         text-decoration: none;
         color: #ffffff;
+        font-weight: 400;
     }
 
     .feather-color {
@@ -555,6 +582,7 @@ section {
         width: fit-content;
         padding: 1em 2em;
         border-radius: 5px;
+        border: 0;
     }
 
     .sobre-nos li{

@@ -30,7 +30,7 @@
     <menu>
         <nav>
             <ul class="menu">
-                <li><a href="#">Pagina Inicial</a></li>
+                <li><a href="#">Pagina Inicial</li></a>
                 <li><a href="#">Quem Somos</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
@@ -146,11 +146,15 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut iusto soluta ab, vel facere quidem qui consectetur sed commodi ea numquam.
             </legend>
             
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="text" name="email" placeholder="E-Mail" required>
-            <input type="number" name="telefone" placeholder="Telefone" required>
-            <input type="text" name="assunto" placeholder="Assunto" required>
-            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
+            <div class="inputs">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="text" name="email" placeholder="E-Mail" required>
+                <input type="number" name="telefone" placeholder="Telefone" required>
+                <input type="text" name="assunto" placeholder="Assunto" required>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
+
+                <button type="submit" class="botao-enviar">Enviar</button>
+            </div>
 
         </form>
     </section>
