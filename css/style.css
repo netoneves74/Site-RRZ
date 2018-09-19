@@ -296,7 +296,7 @@
         width: 100%;
         background-image: url(../img/fundo_formulario.png);
         background-position: center;
-        background-size: 600%;
+        background-size: 100%;
         background-repeat: no-repeat;
         color: #ffffff;
     }
@@ -496,17 +496,6 @@
     }
 
     .busca-anchor-active {
-        top: 12px;
-    }
-
-    .close-anchor {
-        position: fixed;
-        top: -100px;
-        right: 22%;
-        padding: 11px;
-        border: none;
-        border-radius: 5px;
-        text-transform: uppercase;
         font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         transition: all .25s ease-in-out;
